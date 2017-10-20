@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="main">
+<head>
+    <title>mVisa</title>
+</head>
+
+<div layout:fragment="content">
+
+
+    <table class="data">
+        <tr>
+            <td>
+                <h3>Users</h3>
+                <br/> <a href="manageUsers">Manage Users</a><br/> <a
+                    href="createUser">Create User</a>
+            </td>
+
+            <td>
+                <h3>Students</h3>
+                <br/> <a href="manageStudents">Manage Students</a><br/> <a
+                    href="createStudent">Create Student</a>
+            </td>
+
+            <td>
+                <h3>Parents</h3>
+                <br/> <a href="manageParents">Manage Parents</a><br/> <a
+                    href="createParent">Create Parent</a>
+            </td>
+
+            <td>
+                <h3>Messages</h3>
+                <br/> <a href="manageMessages">Manage Parents</a><br/> <a
+                    href="createMessage">Create Parent</a>
+            </td>
+        </tr>
+    </table>
+</div>
+</html>

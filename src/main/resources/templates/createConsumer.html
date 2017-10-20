@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="main">
+<head>
+    <title>mVisa</title>
+</head>
+
+<div layout:fragment="content">
+    <div id="createAgentForm" class="row">
+        <form role="form" method="post" action="createConsumer" commandName="consumer">
+            <div class="col-lg-6">
+                <div class="well well-sm"><strong><span class="glyphicon glyphicon-asterisk"></span>Required
+                    Field</strong></div>
+                <div class="form-group">
+                    <label path="mVisaUser.customerFullName">
+                        <span th:text="#{label.fullName}"/>
+                    </label>
+                    <div class="input-group">
+                        <input path="mVisaUser.customerFullName" type="text" class="form-control" name="InputFullName"
+                               id="InputFullName" placeholder="Enter Full Name" required="required"/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label path="mVisaUser.customerGender">
+                        <span th:text="#{label.gender}"/>
+                    </label>
+                    <div class="input-group">
+                        <input path="mVisaUser.customerGender" type="text" class="form-control" name="InputGender"
+                               id="InputGender" placeholder="Enter Gender" required="required"/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label path="mVisaUser.customerTitle">
+                        <span th:text="#{label.title}"/>
+                    </label>
+                    <div class="input-group">
+                        <input path="mVisaUser.customerTitle" type="text" class="form-control" name="InputTitle"
+                               id="InputTitle" placeholder="Enter Title" required="required"/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label path="mVisaUser.idDocNum">
+                        <span th:text="#{label.idDocNum}"/>
+                    </label>
+                    <div class="input-group">
+                        <input path="mVisaUser.idDocNum" type="text" class="form-control" name="IdDocNum" id="IdDocNum"
+                               placeholder="Enter Id Doc Num" required="required"/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label path="mVisaUser.resident">
+                        <span th:text="#{label.resident}"/>
+                    </label>
+                    <div class="input-group">
+                        <input path="mVisaUser.resident" type="text" class="form-control" name="InputResident"
+                               id="InputResident" placeholder="Enter Resident" required="required"/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label path="mVisaUser.accountNumber">
+                        <span th:text="#{label.accountNumber}"/>
+                    </label>
+                    <div class="input-group">
+                        <input path="mVisaUser.accountNumber" type="text" class="form-control" name="InputAccountNumber"
+                               id="InputAccountNumber" placeholder="Enter Account Number" required="required"/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label path="mVisaUser.acctBBAN">
+                        <span th:text="#{label.acctBBAN}"/>
+                    </label>
+                    <div class="input-group">
+                        <input path="mVisaUser.acctBBAN" type="text" class="form-control" name="InputAccountBBAN"
+                               id="InputAccountBBAN" placeholder="Enter Account BBAN" required="required"/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label path="mVisaUser.mobilePhone">
+                        <span th:text="#{label.mobilePhoone}"/>
+                    </label>
+                    <div class="input-group">
+                        <input path="mVisaUser.mobilePhone" type="text" class="form-control" name="InputMobilePhone"
+                               id="InputMobilePhone" placeholder="Enter Mobile Phone" required="required"/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label path="mVisaUser.email">
+                        <span th:text="#{label.email}"/>
+                    </label>
+                    <div class="input-group">
+                        <input path="mVisaUser.email" type="text" class="form-control" name="InputEmail" id="InputEmail"
+                               placeholder="Enter Email" required="required"/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label path="mVisaUser.homePhone">
+                        <span th:text="#{label.homePhone}"/>
+                    </label>
+                    <div class="input-group">
+                        <input path="mVisaUser.homePhone" type="text" class="form-control" name="InputHomePhone"
+                               id="InputHomePhone" placeholder="Enter Home Phone" required="required"/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label path="mVisaUser.jobPhone">
+                        <span th:text="#{label.jobPhone}"/>
+                    </label>
+                    <div class="input-group">
+                        <input path="mVisaUser.jobPhone" type="text" class="form-control" name="InputJobPhone"
+                               id="InputJobPhone" laceholder="Enter Work Phone" required="required"/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label path="mVisaUser.residentialAddress">
+                        <span th:text="#{label.residentialAddress}"/>
+                    </label>
+                    <div class="input-group">
+                        <input path="mVisaUser.residentialAddress" type="text" class="form-control"
+                               name="InputResidentialAddress" id="InputResidentialAddress"
+                               placeholder="Enter Family Name" required="required"/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label path="mVisaUser.contactAddress">
+                        <span th:text="#{label.contactAddress}"/>
+                    </label>
+                    <div class="input-group">
+                        <input path="mVisaUser.contactAddress" type="text" class="form-control"
+                               name="InputContactAddress" id="InputContactAddress" placeholder="Enter Contact Address"
+                               required="required"/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label path="mVisaUser.branch">
+                        <span th:text="#{label.branch}"/>
+                    </label>
+                    <div class="input-group">
+                        <input path="mVisaUser.branch" type="text" class="form-control" name="InputBranch"
+                               id="InputBranch" placeholder="Enter Branch" required="required"/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label path="mVisaUser.language">
+                        <span th:text="#{label.language}"/>
+                    </label>
+                    <div class="input-group">
+                        <input path="mVisaUser.language" type="text" class="form-control" name="InputLanguage"
+                               id="InputLanguage" placeholder="Enter Language" required="required"/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label path="mVisaUser.liveCountry">
+                        <span th:text="#{label.country}"/>
+                    </label>
+                    <div class="input-group">
+                        <input path="mVisaUser.liveCountry" type="text" class="form-control" name="InputCountry"
+                               id="InputCountry" placeholder="Enter Country" required="required"/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label path="mVisaUser.liveRegion">
+                        <span th:text="#{label.region}"/>
+                    </label>
+                    <div class="input-group">
+                        <input path="mVisaUser.liveRegion" type="text" class="form-control" name="InputRegion"
+                               id="InputRegion" placeholder="Enter Region" required="required"/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label path="mVisaUser.liveCity">
+                        <span th:text="#{label.city}"/>
+                    </label>
+                    <div class="input-group">
+                        <input path="mVisaUser.liveCity" type="text" class="form-control" name="InputCity"
+                               id="InputCity" placeholder="Enter City" required="required"/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label path="mVisaUser.primaryAccountNumber">
+                        <span th:text="#{label.pan}"/>
+                    </label>
+                    <div class="input-group">
+                        <input path="mVisaUser.primaryAccountNumber" type="text" class="form-control" name="InputPAN"
+                               id="InputPAN" placeholder="Enter Primary Account Number" required="required"/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+
+                <input type="submit" name="submit" id="submit" th:value="#{ label.save}"/>" class="btn
+                btn-info pull-right">
+            </div>
+        </form>
+    </div>
+</div>
+</html>

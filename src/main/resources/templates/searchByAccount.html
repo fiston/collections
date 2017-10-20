@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="main">
+<head>
+    <title>mVisa</title>
+</head>
+
+<div layout:fragment="content">
+
+
+    <div id="createAgentForm" class="row">
+        <form role="form" th:method="post" th:action="@{searchByAccount}" th:object="${searchObject}">
+            <div class="form-group" style="display: none">
+
+                <div class="input-group">
+                    <input th:field="*{accountType}" type="text" id="mVisaUserType" name="mVisaUserType"/>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="well well-sm"><strong><span class="glyphicon glyphicon-asterisk"></span>Required
+                    Field</strong></div>
+                <div class="form-group">
+                    <label for="InputAccountNumber">
+                        <span th:text="#{label.accountNumber}"/>
+                    </label>
+                    <div class="input-group">
+                        <input th:field="*{searchString}" type="text" class="form-control" name="InputAccountNumber"
+                               id="InputAccountNumber" placeholder="Enter Account Number" required="required"/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <input type="submit" name="submit" id="submit" th:value="#{label.search}" class="btn btn-info pull-right"/>
+            </div>
+        </form>
+    </div>
+</div>
+</html>
+
+

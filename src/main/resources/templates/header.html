@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GTBank Rwanda mVisa Application</title>
+
+<link href="<c:url value="/resources/css/bootstrap.min.css" />"
+	rel="stylesheet">
+
+<link href="<c:url value="/resources/css/styles.css" />"
+	rel="stylesheet">
+
+<link href="<c:url value="/resources/css/pastel-stream.css" />"
+	rel="stylesheet">
+
+<link href="<c:url value="/resources/css/font-awesome.min.css" />"
+	rel="stylesheet">
+
+<!-- DataTables CSS -->
+<link
+	href="<c:url value="/resources/datatables/media/css/jquery.dataTables.css" />"
+	rel="stylesheet">
+
+</head>
+<body>
+
+	<!-- Navbar -->
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="navbar navbar-default">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse"
+						data-target=".navbar-responsive-collapse">
+						<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">Home</a>
+				</div>
+				<div class="navbar-collapse collapse navbar-responsive-collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">Administration</a></li>
+
+						<li class="dropdown"><a href="#" class="dropdown-toggle"
+							data-toggle="dropdown">Agents <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="searchByAccount?mVisaUserType=agent">Create
+										Agent</a></li>
+								<li><a href="#">Delete Agent</a></li>
+								<li><a href="#">Update Agent</a></li>
+								<li class="divider"></li>
+								<li class="dropdown-header">Other Actions</li>
+								<li><a href="manageParents">Manage Agents</a></li>
+								<li><a href="#">More Options</a></li>
+							</ul></li>
+						<li class="dropdown"><a href="#" class="dropdown-toggle"
+							data-toggle="dropdown">Merchants <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="searchByAccount?mVisaUserType=merchant">Create
+										Merchant</a></li>
+								<li><a href="#">Delete Merchant</a></li>
+								<li><a href="#">Update Merchant</a></li>
+								<li class="divider"></li>
+								<li class="dropdown-header">Other Actions</li>
+								<li><a href="manageStudents">Manage Merchants </a></li>
+								<li><a href="#">More Options</a></li>
+							</ul></li>
+						<li class="dropdown"><a href="#" class="dropdown-toggle"
+							data-toggle="dropdown">Consumers <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="searchByAccount?mVisaUserType=consumer">Create
+										Consumer</a></li>
+								<li><a href="#">Delete Consumer</a></li>
+								<li><a href="#">Edit Consumer</a></li>
+								<li class="divider"></li>
+								<li class="dropdown-header">Other Actions</li>
+								<li><a href="manageMessages">Manage Consumers</a></li>
+							</ul></li>
+
+						<li><a href="#">About us</a></li>
+					</ul>
+					<!-- <ul class="nav navbar-nav navbar-right">
+						<li><a href="logout">Logout</a></li>
+					</ul> -->
+				</div>
+			</div>
+
+
+
+
+			<div class="modal fade" id="basicModalFromHeader" tabindex="-1"
+				role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"
+								aria-hidden="true">X</button>
+							<h1 class="modal-title" id="myModalLabel">
+								<span id="loginError" style="color: red; font-size: 10pt">This
+									feature is under construction </span>
+							</h1>
+						</div>
+						<div class="modal-body">
+							<table id="studentsTableFromHeader" class="display">
+								<thead>
+									<tr>
+										<th></th>
+										<th>Given Name</th>
+										<th>Family Name</th>
+										<th>Year</th>
+									</tr>
+								</thead>
+								<tbody>
+
+								</tbody>
+							</table>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default"
+								data-dismiss="modal">Close</button>
+							<button type="button" onclick="" class="btn btn-primary"
+								data-dismiss="modal">Save changes</button>
+						</div>
+					</div>
+				</div>
+			</div>

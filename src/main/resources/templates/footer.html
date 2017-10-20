@@ -1,0 +1,106 @@
+
+<div id="footer">
+	<center>
+		<p>Copyright © 2017 -GTBank Rwanda. All Rights Reserved.</p>
+	</center>
+
+	<script src="<c:url value="/resources/js/jquery-2.1.1.min.js" />"></script>
+	<script src="<c:url value="/resources/js/bootstrap.min.js" />"></script>
+
+
+
+	<!-- DataTables -->
+	<script
+		src="<c:url value="/resources/datatables/media/js/jquery.dataTables.js" />"></script>
+
+
+
+</div>
+</body>
+
+<style type="text/css">
+#footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+</style>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#parentsTable').dataTable();
+	});
+
+	$(document).ready(function() {
+		$('#studentsTable').dataTable();
+	});
+
+	$(document).ready(function() {
+		$('#studentsTableFromHeader').dataTable();
+	});
+</script>
+
+<script>
+	function getParents() {
+		var values = $('input:checkbox:checked.parentValues').map(function() {
+			return this.value;
+		}).get();
+		var parentIds = "";
+		for (id in values) {
+			parentIds += values[id] + ",";
+		}
+		$("#parentIds").val(parentIds.substring(0, parentIds.length - 1));
+
+		var parentList = "";
+		$('#parentsTable tr').each(function() {
+
+			if ($(this).find('input:checkbox').is(':checked')) {
+
+				$(this).find('td').each(function() {
+					if ($(this).hasClass('number'))
+						parentList += "<" + $(this).text() +">";
+					else
+						parentList += $(this).text() + " ";
+
+				});
+				parentList += ",";
+			}
+		});
+
+		$("#InputParentName").val(
+				parentList.substring(0, parentList.length - 1));
+	}
+
+	function getStudents() {
+		var values = $('input:checkbox:checked.studentValues').map(function() {
+			return this.value;
+		}).get();
+		var studentIds = "";
+		for (id in values) {
+			studentIds += values[id] + ",";
+		}
+		$("#studentListFromPage").val(studentIds.substring(0, studentIds.length - 1));
+
+		var studentList = "";
+		$('#studentsTable tr').each(function() {
+
+			if ($(this).find('input:checkbox').is(':checked')) {
+
+				$(this).find('td').each(function() {
+					if ($(this).hasClass('year'))
+						studentList += "[" + $(this).text() +"]";
+					else
+						studentList += $(this).text() + " ";
+
+				});
+				studentList += ",";
+			}
+		});
+
+		$("#InputStudentName").val(
+				studentList.substring(0, studentList.length - 1));
+	}
+</script>
+</html>
